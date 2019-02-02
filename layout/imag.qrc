@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imag/sexy.jpg</file>
+    </qresource>
+</RCC>
