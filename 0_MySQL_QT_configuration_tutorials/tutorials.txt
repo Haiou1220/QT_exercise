@@ -1,0 +1,22 @@
+安装 MySQL 数据库
+1.首先，从官网下载 MySQL 安装包
+官方下载
+2.安装过程可以参考这篇
+MySQL 5.7 版本的安装及简单使用（图文教程）
+3.可能会遇到的问题
+Qt连接MySQL的时候提示“QSqlDatabase: QMYSQL driver not loaded”，
+原因一：缺少文件
+解决办法
+从 X:\MySQL\lib中将 libmysql.dll 文件复制X:\Qt\Qt5.6.1\5.6\mingw49_32\bin中。运行程序
+
+原因二：Qt Creator与MySQL位数不统一
+如果上面的方法试过了还是不行那么应该是你安装的MySQL和QT的位数不同，可以打开MySQL控制台 
+输入show variables like '%version_%';即可查看MySql位数。
+
+解决办法：
+https://dev.mysql.com/downloads/connector/c/ 下载mysql-connector-c，在其lib目录中找到文件“libmysql.dll”。然后将这个文件复制到Qt的bin目录下，重启Qt Creator后重新打开工程就可以正确运行了。 总之，必须保证你拿到libmysql.dll这个文件对应的mysql的位数必须与QT的位数相同。
+--------------------- 
+作者：_zero. 
+来源：CSDN 
+原文：https://blog.csdn.net/kilotwo/article/details/79248657 
+版权声明：本文为博主原创文章，转载请附上博文链接！
