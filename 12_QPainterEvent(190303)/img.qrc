@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new">
+        <file>1.png</file>
+        <file>smile.png</file>
+    </qresource>
+</RCC>
